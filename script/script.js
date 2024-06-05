@@ -56,11 +56,9 @@ function GameControlling(){
     const switchPlayer = () => {
         if (activePlayer === 1){
             activePlayer = 0;//Se cambia para el jugador de las cruces
-            console.log(activePlayer);
         }
         else{
             activePlayer = 1;
-            console.log(activePlayer);
         }
     }
 
@@ -71,7 +69,7 @@ function GameControlling(){
         
         //Primera Linea Vertical
         if(playBoard[0][0]===playBoard[1][0] && playBoard[0][0]===playBoard[2][0] && playBoard[0][0] === "X" || playBoard[0][0]===playBoard[1][0] && playBoard[0][0]===playBoard[2][0] && playBoard[0][0] === "0" ){
-            console.log("columna 0 todo igual")
+            console.log("columna 0 todo igual")//Borrar estos console.log al final del proyecto
             return playBoard[0][0];//Para saber si gano el cero o la cruz
         }
         //Segunda Linea Vertical
@@ -135,7 +133,6 @@ function GameControlling(){
         //Para la comprobacion por consola, llenar directamente desde el codigo
         //Variable countRounds para saber cdo se llegue a 8(empieza en 0)
         countRounds++;
-        console.log(countRounds)
         let playAgain = 0
         do{ //se devuelve cero cdo el jugador juega mal
             playAgain = board.refreshBoard(row,column,valueCell); //Se sale de este ciclo cdo el jugador juege bien
@@ -175,5 +172,11 @@ function GameControlling(){
     roundPlay();
 }
 
+//GameControlling();
 
-GameControlling();
+function ScreenControlling(){
+    //Funcion para manipular el DOM, recibir entradas de cada jugador(nombre y seleccion)
+    //Obtener coordenada de cada boton, y pasarlo por el GameControlling
+    //Elaborar mensaje de jugador ganador o empate una vez terminado el GameControlling,respetando el funcionamiento de este game controlling
+    
+}

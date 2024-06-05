@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script/script.js" ></script>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+   <!-- <script src="./script/script.js" defer></script> -->
     <title>Document</title>
 </head>
 <body>
+    <div class="players">
+        <div id="player1"> Player 1
+            <br>
+            <label for="name1"> Name:</label>
+            <input type="text" id="name1" name="Name" required>
+            <label for="choice1X">X?</label>
+            <input type="checkbox" id="checkbox1" required>
+            <label for="choice10">0?</label>
+            <input type="checkbox"  id="checkbox12" required>
+        </div>
+        <div id="player2"> Player 2
+            <br>
+            <label for="name1"> Name:</label>
+            <input type="text" id="name1" name="Name" required>
+            <label for="choice1X">X?</label>
+            <input type="checkbox" id="checkbox1" required>
+            <label for="choice10">0?</label>
+            <input type="checkbox"  id="checkbox12" required>
+        </div>
+    </div>
+
+    <div class="container-board">
+        <div class="board">
+            <button id="0" class="board-item">X</button>
+            <button id="1" class="board-item">X</button>
+            <button id="3" class="board-item">X</button>
+            <button id="4" class="board-item">0</button>
+            <button id="5" class="board-item">X</button>
+            <button id="6" class="board-item">0</button>
+            <button id="7" class="board-item">X</button>
+            <button id="8" class="board-item">X</button>
+            <button id="9" class="board-item">X</button>
+        </div>
+        <button class="game-reset">Reiniciar juego</button>
+    </div>
     
 </body>
 </html>
